@@ -16,7 +16,7 @@ const images = [
 
 const markup = ({url, alt}) => { 
   return `
-    <li class="image-list"><img src="${url}" alt="${alt}"></li>
+    <li class="image-list"><img class="gallery-image" src="${url}" alt="${alt}"></li>
   `;
 }
 

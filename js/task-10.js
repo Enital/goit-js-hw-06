@@ -4,14 +4,17 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 };
 
-function createBoxes (amount) {
-  for (let i = 0; i < amount; i++) {
+function createBoxes(amount) {
+  const boxArray = [];
+  for (let i = 0; i < amount; i++) {    
     const div = document.createElement('div');
     div.style.width = `${30 + i * 10}px`;
     div.style.height = `${30 + i * 10}px`;
     div.style.background = getRandomHexColor();
-    document.querySelector('#boxes').appendChild(div);
+    boxArray.push(div);    
   }
+
+  document.querySelector('#boxes').append(...boxArray);
 };
 
 function destroyBoxes() {
